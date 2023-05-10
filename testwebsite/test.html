@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Information Form</title>
+    <style>
+        body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		form {
+			margin-top: 2rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+    </style>
+</head>
+<body>
+	<h1>Student Information Form</h1>
+		
+    <form action="insert.php" method="post">
+        <label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br>
+
+		<label for="rollno">Roll No.:</label>
+		<input type="text" id="rollno" name="rollno"><br>
+
+		<label for="dob">DOB:</label>
+		<input type="date" id="dob" name="dob"><br>
+
+		<label for="address">Address:</label>
+		<textarea id="address" name="address"></textarea><br>
+
+		<label for="course">Course:</label>
+		<select id="course" name="course">
+			<option value="Engineering">Engineering</option>
+			<option value="Medical">Medical</option>
+			<option value="Management">Management</option>
+			<option value="Arts">Arts</option>
+			<option value="Science">Science</option>
+		</select><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

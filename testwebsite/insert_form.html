@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insert Data - Student Information System</title>
+    <style>
+        body {
+			font-family: Arial, sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+			background-color: #f3ecec;
+		}
+		h1 {
+			text-align: center;
+			margin: 2rem 0;
+			font-size: 55px;
+			color: navy;
+		}
+		form {
+			width: 50%;
+			background-color: #f3ecec;
+			border-radius: 20px;
+			box-shadow: 10px 9px 20px 1px #c7adad;
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+		}
+		form label {
+			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
+		}
+		form input, form textarea, form select {
+			width: 100%;
+			padding: 10px;
+			border-radius: 10px;
+			border: 1px solid #ccc;
+			margin-bottom: 1rem;
+			font-size: 1.2rem;
+
+		}
+		form select {
+			height: 3rem;
+		}
+		form input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 0.8rem;
+			font-size: 1.2rem;
+			border-radius: 20px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+		form input[type="submit"]:hover {
+			background-color: #2e8b57;
+		
+			border-radius: 20px;
+		}
+    </style>
+</head>
+<body>
+	<h1>Insert Student Information</h1>
+		
+    <form action="insert.php" method="post">
+        <label for="name">Name:</label>
+		<input type="text" id="name" name="name" >
+
+		<label for="rollno">Roll No.:</label>
+		<input type="text" id="rollno" name="rollno" required>
+
+		<label for="dob">DOB:</label>
+		<input type="date" id="dob" name="dob" >
+
+		<label for="address">Address:</label>
+		<textarea id="address" name="address" ></textarea>
+
+		<label for="course">Course:</label>
+		<select id="course" name="course">
+			<option value="">Choose</option>
+			<option value="Engineering">Engineering</option>
+			<option value="Medical">Medical</option>
+			<option value="Management">Management</option>
+			<option value="Arts">Arts</option>
+			<option value="Science">Science</option>
+		</select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
